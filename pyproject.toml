@@ -8,6 +8,7 @@ version = "1.0.0"
 description = "Authenticated file encryption with a desktop GUI and a CLI."
 readme = "README.md"
 requires-python = ">=3.10"
+license = { text = "MIT" }
 keywords = ["encryption", "aes-gcm", "file-encryption", "cryptography", "gui", "cli"]
 authors = [{ name = "SENAI4LIFE" }]
 classifiers = [
@@ -15,6 +16,7 @@ classifiers = [
   "Environment :: Console",
   "Environment :: X11 Applications",
   "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.10",
@@ -45,7 +47,7 @@ memocypher-gui = "memocypher.cli:gui_main"
 packages = ["memocypher"]
 
 [tool.hatch.build.targets.sdist]
-include = ["memocypher", "tests", "README.md", "pyproject.toml"]
+include = ["memocypher", "tests", "README.md", "LICENSE", "pyproject.toml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

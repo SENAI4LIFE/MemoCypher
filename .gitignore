@@ -22,6 +22,15 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# memocypher working files that should never be committed
+# Local agent and review files
+/.claude/
+/.codex/
+CLAUDE.md
+AGENTS.md
+/.review/
+/review.md
+.env
+
+# MemoCypher working files that should never be committed
 *.mckey
 *.mcz

@@ -10,6 +10,7 @@ Authenticated file encryption with a desktop GUI and a command-line interface.
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](https://www.python.org/downloads/)
 [![Lint: Ruff](https://img.shields.io/badge/lint-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#requirements)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 MemoCypher encrypts a file into a self-describing `.mcz` container, or packs a
 whole folder into one `.zip.mcz`. Each container is sealed with AES-256-GCM in a
@@ -247,3 +248,7 @@ reorder detection, wrong credentials), archive packing, key files and matching,
 atomic writes and collision policies, workspace scanning, batch planning and
 execution including cancellation, the CLI, and a GUI check that drives a real
 window without entering the main loop.
+
+## License
+
+MemoCypher is released under the [MIT License](LICENSE).
