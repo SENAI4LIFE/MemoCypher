@@ -1,4 +1,4 @@
-"""The memocypher desktop application."""
+"""The MemoCypher desktop application."""
 
 from __future__ import annotations
 
@@ -47,7 +47,7 @@ _BaseRoot = dnd.base_tk_class()
 class MemocypherApp(_BaseRoot):  # type: ignore[misc,valid-type]
     def __init__(self) -> None:
         super().__init__()
-        self.title("memocypher")
+        self.title("MemoCypher")
         self.minsize(940, 600)
         self.geometry("1180x760")
 
@@ -109,7 +109,7 @@ class MemocypherApp(_BaseRoot):  # type: ignore[misc,valid-type]
         menubar.add_cascade(label="View", menu=view_menu)
 
         help_menu = tk.Menu(menubar, tearoff=0)
-        help_menu.add_command(label="Project page", command=lambda: webbrowser.open("https://github.com/SENAI4LIFE/memocypher"))
+        help_menu.add_command(label="Project page", command=lambda: webbrowser.open("https://github.com/SENAI4LIFE/MemoCypher"))
         help_menu.add_command(label="About", command=lambda: dialogs.show_about(self, self.theme))
         menubar.add_cascade(label="Help", menu=help_menu)
         self.config(menu=menubar)
@@ -120,7 +120,7 @@ class MemocypherApp(_BaseRoot):  # type: ignore[misc,valid-type]
         self.brand_glyph = icons.brand_glyph(self, self.theme.h1)
         if self.brand_glyph is not None:
             ttk.Label(bar, image=self.brand_glyph).pack(side="left", padx=(0, SM))
-        ttk.Label(bar, text="memocypher", style="H1.TLabel").pack(side="left")
+        ttk.Label(bar, text="MemoCypher", style="H1.TLabel").pack(side="left")
 
         right = ttk.Frame(bar)
         right.pack(side="right")
@@ -476,7 +476,7 @@ class MemocypherApp(_BaseRoot):  # type: ignore[misc,valid-type]
         chosen = filedialog.askopenfilename(
             parent=self,
             initialdir=str(self.workspace_dir),
-            filetypes=[("memocypher key", "*.mckey"), ("Legacy key", "*.key"), ("All files", "*.*")],
+            filetypes=[("MemoCypher key", "*.mckey"), ("Legacy key", "*.key"), ("All files", "*.*")],
         )
         if chosen:
             self.keyfile_path.set(chosen)

@@ -63,7 +63,7 @@ def test_theme_tokens_present():
 
 
 def test_app_builds_and_toggles_theme(app):
-    assert app.title() == "memocypher"
+    assert app.title() == "MemoCypher"
     app.toggle_mode()
     assert app.mode == "light"
     app.toggle_mode()
@@ -86,7 +86,7 @@ def test_window_icon_and_brand_glyph(app):
     (glyph_label,) = _labels_showing(app, app.brand_glyph)
     siblings = glyph_label.master.pack_slaves()
     title = siblings[siblings.index(glyph_label) + 1]
-    assert title.cget("text") == "memocypher"
+    assert title.cget("text") == "MemoCypher"
     assert str(title.cget("style")) == "H1.TLabel"
 
     app.toggle_mode()

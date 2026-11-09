@@ -224,7 +224,7 @@ def validate_source_dir(path: Path) -> Path:
 def delete_file(path: Path) -> None:
     """Delete a file with a normal unlink.
 
-    memocypher does not offer a "secure wipe": on SSDs, wear levelling and
+    MemoCypher does not offer a "secure wipe": on SSDs, wear levelling and
     over-provisioning, and on journaling or copy-on-write filesystems the
     snapshotting layer, mean overwriting a file's visible blocks does not
     reliably erase the underlying data. Full-disk encryption is the dependable

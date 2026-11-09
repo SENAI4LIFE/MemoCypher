@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="memocypher/gui/assets/memocypher-256.png" width="96" alt="memocypher icon">
+  <img src="memocypher/gui/assets/memocypher-256.png" width="96" alt="MemoCypher icon">
 </p>
 
-# memocypher
+# MemoCypher
 
 Authenticated file encryption with a desktop GUI and a command-line interface.
 
-[![CI](https://github.com/SENAI4LIFE/memocypher/actions/workflows/ci.yml/badge.svg)](https://github.com/SENAI4LIFE/memocypher/actions/workflows/ci.yml)
+[![CI](https://github.com/SENAI4LIFE/MemoCypher/actions/workflows/ci.yml/badge.svg)](https://github.com/SENAI4LIFE/MemoCypher/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776ab.svg)](https://www.python.org/downloads/)
 [![Lint: Ruff](https://img.shields.io/badge/lint-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 [![Platforms](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#requirements)
 
-memocypher encrypts a file into a self-describing `.mcz` container, or packs a
+MemoCypher encrypts a file into a self-describing `.mcz` container, or packs a
 whole folder into one `.zip.mcz`. Each container is sealed with AES-256-GCM in a
 streaming construction, so files of any size are processed with constant memory
 and any truncation, reordering or modification of the ciphertext is detected
@@ -157,7 +157,7 @@ credential.
 
 ## Architecture
 
-memocypher is a small Python package with a firm boundary between the
+MemoCypher is a small Python package with a firm boundary between the
 cryptographic core and the interfaces.
 
 ```
@@ -191,7 +191,7 @@ positional index make truncation, reordering and extension fail authentication.
 
 ## Security
 
-What memocypher provides:
+What MemoCypher provides:
 
 - **Confidentiality and integrity.** AES-256-GCM authenticates every segment.
   A wrong passphrase or key file, or any change to the header or ciphertext,
@@ -210,12 +210,12 @@ What it deliberately does not claim:
 
 - **No secure erase of plaintext.** On SSDs (wear levelling, over-provisioning)
   and on journaling or copy-on-write filesystems, overwriting a file's visible
-  blocks does not reliably destroy the data. memocypher does a normal delete
+  blocks does not reliably destroy the data. MemoCypher does a normal delete
   and nothing more. Protect data at rest with full-disk encryption.
 - **No in-memory key protection.** Python cannot reliably zero secrets in
   memory, so no such guarantee is made.
 - **Metadata is not hidden.** A container reveals its size, that it is a
-  memocypher file, whether it uses a passphrase or a key file, and, in key-file
+  MemoCypher file, whether it uses a passphrase or a key file, and, in key-file
   mode, the key id. Original file names are not stored in the container. The
   folder workflow leaves an unencrypted zip on disk for the short window
   between packing and sealing.

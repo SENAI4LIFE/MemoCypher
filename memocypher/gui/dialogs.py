@@ -269,8 +269,8 @@ def ask_collision_policy(
 
 def show_about(parent: tk.Misc, theme: Theme) -> None:
     messagebox.showinfo(
-        "About memocypher",
-        f"memocypher {__version__}\n\n"
+        "About MemoCypher",
+        f"MemoCypher {__version__}\n\n"
         "Authenticated file encryption using AES-256-GCM in a streaming\n"
         "construction, with scrypt passphrases or 256-bit key files.",
         parent=parent,

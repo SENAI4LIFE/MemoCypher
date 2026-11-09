@@ -1,1 +1,1 @@
-"""Tkinter desktop interface for memocypher."""
+"""Tkinter desktop interface for MemoCypher."""

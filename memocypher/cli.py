@@ -1,4 +1,4 @@
-"""Command-line interface for memocypher.
+"""Command-line interface for MemoCypher.
 
     memocypher encrypt  PATHS...  [--keyfile K | --passphrase] [-o DIR] [-r]
     memocypher decrypt  PATHS...  [--keyfile K | --passphrase] [-o DIR]
@@ -44,7 +44,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="memocypher",
         description="Authenticated file encryption (AES-256-GCM streaming).",
     )
-    parser.add_argument("--version", action="version", version=f"memocypher {__version__}")
+    parser.add_argument("--version", action="version", version=f"MemoCypher {__version__}")
     sub = parser.add_subparsers(dest="command")
 
     def add_credential_opts(p: argparse.ArgumentParser) -> None:
@@ -339,7 +339,7 @@ def _cmd_keyinfo(args) -> int:
             print(f"error: {exc}", file=sys.stderr)
             return EXIT_FAILURE
         print(f"path:    {path}")
-        print(f"type:    memocypher container v{header.version}")
+        print(f"type:    MemoCypher container v{header.version}")
         print(f"cred:    {header.cred}")
         print(f"key id:  {format_key_id(header.key_id)}")
         if header.kdf:
@@ -391,7 +391,7 @@ def _cmd_identify(args) -> int:
             print(f"  error: {entry['error']}")
             continue
         if entry.get("type") != "memocypher":
-            print("  not a memocypher v1 container")
+            print("  not a MemoCypher v1 container")
             continue
         print(f"  cred:   {entry['cred']}")
         print(f"  key id: {format_key_id(entry['key_id'])}")

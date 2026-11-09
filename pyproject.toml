@@ -31,9 +31,9 @@ dnd = ["tkinterdnd2>=0.4"]
 dev = ["pytest>=7", "ruff>=0.6"]
 
 [project.urls]
-Homepage = "https://github.com/SENAI4LIFE/memocypher"
-Source = "https://github.com/SENAI4LIFE/memocypher"
-Issues = "https://github.com/SENAI4LIFE/memocypher/issues"
+Homepage = "https://github.com/SENAI4LIFE/MemoCypher"
+Source = "https://github.com/SENAI4LIFE/MemoCypher"
+Issues = "https://github.com/SENAI4LIFE/MemoCypher/issues"
 
 [project.scripts]
 memocypher = "memocypher.cli:main"

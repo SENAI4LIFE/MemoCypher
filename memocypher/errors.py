@@ -1,4 +1,4 @@
-"""Exception hierarchy shared across memocypher.
+"""Exception hierarchy shared across MemoCypher.
 
 Every error raised deliberately by the package derives from
 :class:`MemocypherError`, so callers can catch one type and show a message
@@ -9,11 +9,11 @@ from __future__ import annotations
 
 
 class MemocypherError(Exception):
-    """Base class for all errors raised by memocypher."""
+    """Base class for all errors raised by MemoCypher."""
 
 
 class UnsupportedFormatError(MemocypherError):
-    """The input is not a container memocypher knows how to read."""
+    """The input is not a container MemoCypher knows how to read."""
 
 
 class IntegrityError(MemocypherError):

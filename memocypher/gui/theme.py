@@ -1,4 +1,4 @@
-"""Design tokens and ttk styling for the memocypher GUI.
+"""Design tokens and ttk styling for the MemoCypher GUI.
 
 Everything visual is driven from one place: a spacing scale, a type scale and
 two colour palettes (dark and light). Widgets read tokens from the active

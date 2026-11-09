@@ -1,6 +1,6 @@
 """Key file format, key generation and key discovery.
 
-A memocypher key file (``.mckey``) is small, UTF-8 and human-inspectable::
+A MemoCypher key file (``.mckey``) is small, UTF-8 and human-inspectable::
 
     memocypher-key/1
     id: 131c2d63fb4ed5f1

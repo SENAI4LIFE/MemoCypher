@@ -1,4 +1,4 @@
-"""Authenticated streaming encryption for memocypher.
+"""Authenticated streaming encryption for MemoCypher.
 
 Container layout (``memocypher/1``)::
 
@@ -238,9 +238,9 @@ def parse_header(prefix: bytes) -> ContainerHeader:
     """Parse a container header from the leading bytes of a file."""
 
     if len(prefix) < len(MAGIC) + 2:
-        raise UnsupportedFormatError("File is too short to be a memocypher container.")
+        raise UnsupportedFormatError("File is too short to be a MemoCypher container.")
     if not prefix.startswith(MAGIC):
-        raise UnsupportedFormatError("Not a memocypher container (bad magic).")
+        raise UnsupportedFormatError("Not a MemoCypher container (bad magic).")
     (header_len,) = struct.unpack(">H", prefix[len(MAGIC) : len(MAGIC) + 2])
     if header_len == 0 or header_len > _MAX_HEADER_LEN:
         raise UnsupportedFormatError("Container header length is out of range.")

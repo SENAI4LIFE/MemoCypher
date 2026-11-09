@@ -1,4 +1,4 @@
-"""memocypher - authenticated file encryption with a GUI and a CLI.
+"""MemoCypher - authenticated file encryption with a GUI and a CLI.
 
 The public surface is intentionally small; import the submodules directly for
 anything lower level.
