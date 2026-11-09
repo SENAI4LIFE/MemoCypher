@@ -8,7 +8,7 @@ from importlib import resources
 import pytest
 
 ASSETS = resources.files("memocypher.gui") / "assets"
-RGB, RGBA = 2, 6
+RGBA = 6
 
 
 def png_header(data: bytes) -> tuple[int, int, int]:
@@ -20,7 +20,7 @@ def png_header(data: bytes) -> tuple[int, int, int]:
 @pytest.mark.parametrize(
     ("name", "size", "colour_type"),
     [
-        ("memocypher.png", 1254, RGB),
+        ("memocypher.png", 1024, RGBA),
         ("memocypher-256.png", 256, RGBA),
         ("memocypher-32.png", 32, RGBA),
         ("memocypher-16.png", 16, RGBA),
